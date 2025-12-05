@@ -72,29 +72,32 @@
         transition: opacity 0.7s ease;
       }
 
+      /* ---- CARTA AJUSTADA ---- */
+
       .carta {
         position: fixed;
-        top: 60px;
-        bottom: 60px;
+        top: 50%;
         left: 50%;
-        transform: translateX(-50%);
-        max-width: 680px;
-        width: 90%;
+        transform: translate(-50%, -50%);
+        max-width: 600px;
         background: #fffefc;
         color: #333;
-        font-size: 20px;
+        font-size: 26px;
         padding: 30px 40px;
         border-radius: 16px;
         box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
         opacity: 0;
         transition: opacity 1.2s ease;
         font-family: 'Caveat', cursive;
-        line-height: 1.8;
-        overflow-y: auto;
+        line-height: 1.9;
         pointer-events: none;
         user-select: text;
         z-index: 20;
         border: 1px solid #ddd;
+        width: auto;
+        height: auto;
+        max-height: 80vh;
+        overflow-y: auto;
       }
 
       .carta.show {
@@ -126,11 +129,11 @@
     </div>
 
     <div class="carta" id="carta" tabindex="0" aria-live="polite">
-    <p>Oi, Nathalia,</p> 
-    <p>Tô te escrevendo nessa “carta” porque a gente só conversa de mês em mês, então já entrei no clima antigo mesmo. Sobre o almoço: eu faço, claro. Só preciso passar essa semana, porque tô trabalhando tanto que parece que todo dia é segunda.</p> 
-    <p>Mas tem uma condição: tu faz a sobremesa que me prometeu. Aí o acordo tá fechado.</p> 
-    <p>No aguardo da tua resposta, de preferência antes do próximo semestre.
-    <br />Um beijo,<br />João Victor</p>
+      <p>Oi, Nathalia,</p>
+      <p>Tô te escrevendo nessa “carta” porque a gente só conversa de mês em mês, então já entrei no clima antigo mesmo. Sobre o almoço: eu faço, claro. Só preciso passar essa semana, porque tô trabalhando tanto que parece que todo dia é segunda.</p>
+      <p>Mas tem uma condição: tu faz a sobremesa que me prometeu. Aí o acordo tá fechado.</p>
+      <p>No aguardo da tua resposta, de preferência antes do próximo semestre.<br />Um beijo,<br />João Victor</p>
+    </div>
 
     <script>
       function abrirEnvelope(elemento) {
@@ -149,3 +152,4 @@
     </script>
   </body>
 </html>
+
