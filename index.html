@@ -8,88 +8,156 @@
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
     }
 
-    body {
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-family: 'Poppins', sans-serif;
+    body{
+      height:100vh;
+      overflow:hidden;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      font-family:'Poppins', sans-serif;
       background: linear-gradient(-45deg, #ff4d6d, #ff758f, #7a0019, #2b0000);
-      background-size: 400% 400%;
-      animation: gradient 8s ease infinite;
-      color: white;
+      background-size:400% 400%;
+      animation:gradient 8s ease infinite;
+      color:white;
+      position:relative;
     }
 
-    @keyframes gradient {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
+    @keyframes gradient{
+      0%{background-position:0% 50%;}
+      50%{background-position:100% 50%;}
+      100%{background-position:0% 50%;}
     }
 
-    .card {
-      background: rgba(255, 255, 255, 0.08);
-      padding: 50px 40px;
-      border-radius: 20px;
-      text-align: center;
-      backdrop-filter: blur(15px);
-      box-shadow: 0 20px 40px rgba(0,0,0,0.5);
-      max-width: 420px;
-      animation: fadeIn 1.2s ease;
+    /* BEIJINHOS FLUTUANDO */
+
+    .kiss{
+      position:absolute;
+      font-size:28px;
+      animation: subir linear infinite;
+      opacity:0.8;
     }
 
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-        transform: translateY(30px);
+    .kiss:nth-child(1){
+      left:10%;
+      animation-duration:8s;
+      animation-delay:0s;
+    }
+
+    .kiss:nth-child(2){
+      left:25%;
+      animation-duration:10s;
+      animation-delay:2s;
+      font-size:40px;
+    }
+
+    .kiss:nth-child(3){
+      left:50%;
+      animation-duration:7s;
+      animation-delay:1s;
+    }
+
+    .kiss:nth-child(4){
+      left:70%;
+      animation-duration:9s;
+      animation-delay:3s;
+      font-size:36px;
+    }
+
+    .kiss:nth-child(5){
+      left:88%;
+      animation-duration:11s;
+      animation-delay:0s;
+    }
+
+    @keyframes subir{
+      0%{
+        transform:translateY(100vh) rotate(0deg);
+        opacity:0;
       }
-      to {
-        opacity: 1;
-        transform: translateY(0);
+
+      15%{
+        opacity:1;
+      }
+
+      100%{
+        transform:translateY(-120vh) rotate(360deg);
+        opacity:0;
       }
     }
 
-    h1 {
-      font-weight: 700;
-      margin-bottom: 15px;
-      font-size: 28px;
+    .card{
+      position:relative;
+      z-index:10;
+      background:rgba(255,255,255,0.08);
+      padding:50px 40px;
+      border-radius:24px;
+      text-align:center;
+      backdrop-filter:blur(15px);
+      box-shadow:0 20px 40px rgba(0,0,0,0.5);
+      max-width:420px;
+      animation:fadeIn 1.2s ease;
     }
 
-    p {
-      font-weight: 300;
-      margin-bottom: 35px;
-      font-size: 15px;
-      line-height: 1.6;
-      color: #f5f5f5;
+    @keyframes fadeIn{
+      from{
+        opacity:0;
+        transform:translateY(30px);
+      }
+
+      to{
+        opacity:1;
+        transform:translateY(0);
+      }
     }
 
-    button {
-      padding: 14px 28px;
-      border: none;
-      border-radius: 50px;
-      background: linear-gradient(45deg, #ff4d6d, #ff1f4b);
-      color: white;
-      font-size: 15px;
-      font-weight: 500;
-      cursor: pointer;
-      transition: 0.3s ease;
-      box-shadow: 0 8px 20px rgba(255, 31, 75, 0.4);
+    h1{
+      font-size:30px;
+      margin-bottom:15px;
+      animation:pulse 2s infinite;
     }
 
-    button:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 12px 25px rgba(255, 31, 75, 0.6);
+    @keyframes pulse{
+      0%{transform:scale(1);}
+      50%{transform:scale(1.05);}
+      100%{transform:scale(1);}
     }
 
-    .footer {
-      margin-top: 20px;
-      font-size: 12px;
-      opacity: 0.7;
+    p{
+      font-weight:300;
+      margin-bottom:35px;
+      font-size:15px;
+      line-height:1.6;
+      color:#f5f5f5;
+    }
+
+    button{
+      padding:14px 30px;
+      border:none;
+      border-radius:50px;
+      background:linear-gradient(45deg,#ff4d6d,#ff1f4b);
+      color:white;
+      font-size:15px;
+      font-weight:500;
+      cursor:pointer;
+      transition:0.3s ease;
+      box-shadow:0 8px 20px rgba(255,31,75,0.4);
+    }
+
+    button:hover{
+      transform:translateY(-4px) scale(1.05);
+      box-shadow:0 12px 25px rgba(255,31,75,0.6);
+    }
+
+    .footer{
+      margin-top:20px;
+      font-size:12px;
+      opacity:0.7;
     }
 
   </style>
@@ -97,29 +165,41 @@
 
 <body>
 
+  <!-- BEIJINHOS -->
+  <div class="kiss">💋</div>
+  <div class="kiss">😘</div>
+  <div class="kiss">💋</div>
+  <div class="kiss">😘</div>
+  <div class="kiss">💋</div>
+
   <div class="card">
+
     <h1>💋 Vale Beijos</h1>
 
     <p>
       Este cupom dá direito a beijos ilimitados,
-      carinho premium e momentos especiais com alguém
-      que claramente está pensando em você agora.
+      abraços demorados e momentos especiais com alguém
+      que claramente quer te ver de novo. 😏
     </p>
 
-    <button onclick="resgatar()">Resgatar Agora</button>
+    <button onclick="resgatar()">
+      Resgatar Agora
+    </button>
 
     <div class="footer">
-      Uso pessoal e intransferível. 😏
+      Uso pessoal e altamente viciante.
     </div>
+
   </div>
 
   <script>
-    function resgatar() {
+
+    function resgatar(){
 
       const numero = "5587992049094";
 
       const mensagem =
-        "Oi 😏 Vim resgatar meu Vale Beijos. Quando posso usar?";
+        "Oi %F0%9F%98%8F Vim resgatar meu Vale Beijos. Quando posso usar %F0%9F%92%8B";
 
       const url =
         "https://wa.me/" + numero +
@@ -127,8 +207,8 @@
 
       window.open(url, "_blank");
     }
+
   </script>
 
 </body>
 </html>
-
