@@ -4,10 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Feliz Aniversário 🎂</title>
+  <title>Feliz Aniversário, Érica 🎂</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
@@ -32,8 +33,6 @@
       min-height:100vh;
       overflow-x:hidden;
     }
-
-    /* ESTRELAS / BRILHOS */
 
     .stars{
       position:fixed;
@@ -67,8 +66,6 @@
         opacity:1;
       }
     }
-
-    /* TELA INICIAL */
 
     .hero{
       min-height:100vh;
@@ -113,16 +110,10 @@
 
     h1{
       font-family:'Great Vibes', cursive;
-
       font-size:clamp(60px,10vw,110px);
-
       line-height:1;
-
       font-weight:400;
-
-      text-shadow:
-        0 5px 25px rgba(0,0,0,.4);
-
+      text-shadow:0 5px 25px rgba(0,0,0,.4);
       margin-bottom:20px;
     }
 
@@ -133,35 +124,22 @@
     .hero p{
       max-width:600px;
       margin:auto;
-
       line-height:1.8;
-
       font-size:16px;
-
       opacity:.9;
     }
 
     .scroll-btn{
       margin-top:45px;
-
       border:none;
-
       padding:14px 28px;
-
       border-radius:40px;
-
       color:white;
-
       font-size:14px;
-
       background:rgba(255,255,255,.14);
-
       backdrop-filter:blur(10px);
-
       border:1px solid rgba(255,255,255,.2);
-
       cursor:pointer;
-
       transition:.3s;
     }
 
@@ -170,67 +148,44 @@
       background:rgba(255,255,255,.24);
     }
 
-    /* SEÇÕES */
-
     section{
       position:relative;
       z-index:2;
-
       max-width:1100px;
-
       margin:auto;
-
       padding:90px 25px;
     }
 
     .section-title{
       text-align:center;
-
       font-family:'Great Vibes', cursive;
-
       font-size:55px;
-
       margin-bottom:45px;
     }
 
-    /* GALERIA */
-
     .gallery{
       display:grid;
-
-      grid-template-columns:
-        repeat(auto-fit,minmax(220px,1fr));
-
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
       gap:20px;
     }
 
     .photo{
       position:relative;
-
       border-radius:22px;
-
       overflow:hidden;
-
       aspect-ratio:4/5;
-
-      box-shadow:
-        0 20px 40px rgba(0,0,0,.35);
-
+      box-shadow:0 20px 40px rgba(0,0,0,.35);
       transition:.4s;
     }
 
     .photo:hover{
-      transform:
-        translateY(-8px)
-        rotate(1deg);
+      transform:translateY(-8px) rotate(1deg);
     }
 
     .photo img{
       width:100%;
       height:100%;
-
       object-fit:cover;
-
       transition:.5s;
     }
 
@@ -240,9 +195,7 @@
 
     .photo::after{
       content:"";
-
       position:absolute;
-
       inset:0;
 
       background:
@@ -252,47 +205,31 @@
         );
     }
 
-    /* MENSAGEM */
-
     .message{
       max-width:800px;
-
       margin:auto;
-
       padding:45px;
-
       border-radius:28px;
-
       background:rgba(255,255,255,.09);
-
       border:1px solid rgba(255,255,255,.12);
-
       backdrop-filter:blur(18px);
-
-      box-shadow:
-        0 20px 50px rgba(0,0,0,.3);
-
+      box-shadow:0 20px 50px rgba(0,0,0,.3);
       text-align:center;
     }
 
     .message p{
       line-height:2;
-
       font-size:16px;
-
       font-weight:300;
     }
 
     .heart{
       font-size:35px;
-
       margin-bottom:20px;
-
       animation:heart 1.5s infinite;
     }
 
     @keyframes heart{
-
       0%,100%{
         transform:scale(1);
       }
@@ -300,10 +237,7 @@
       50%{
         transform:scale(1.2);
       }
-
     }
-
-    /* SURPRESA */
 
     .surprise{
       text-align:center;
@@ -311,9 +245,7 @@
 
     .surprise button{
       padding:16px 35px;
-
       border:none;
-
       border-radius:50px;
 
       background:
@@ -324,11 +256,8 @@
         );
 
       color:white;
-
       font-size:15px;
-
       font-weight:600;
-
       cursor:pointer;
 
       box-shadow:
@@ -338,102 +267,83 @@
     }
 
     .surprise button:hover{
-      transform:
-        translateY(-5px)
-        scale(1.05);
+      transform:translateY(-5px) scale(1.05);
     }
 
     .hidden-message{
-
       max-height:0;
-
       overflow:hidden;
-
       opacity:0;
-
       transition:.8s ease;
-
       max-width:700px;
-
       margin:0 auto;
-
     }
 
     .hidden-message.show{
-
-      max-height:600px;
-
+      max-height:800px;
       opacity:1;
-
       margin-top:35px;
-
     }
 
-    .hidden-message div{
-
-      background:
-        rgba(255,255,255,.1);
-
-      padding:35px;
-
+    .vale{
+      background:rgba(255,255,255,.1);
+      padding:40px 30px;
       border-radius:25px;
-
       backdrop-filter:blur(15px);
-
       line-height:1.8;
-
+      border:1px solid rgba(255,255,255,.15);
     }
 
-    /* PLAYER DE MÚSICA */
+    .vale-icon{
+      font-size:55px;
+      margin-bottom:15px;
+    }
+
+    .vale h3{
+      font-size:26px;
+      margin-bottom:15px;
+    }
+
+    .vale p{
+      margin-bottom:25px;
+      font-weight:300;
+    }
+
+    .resgatar{
+      background:linear-gradient(45deg,#25d366,#128c7e) !important;
+      box-shadow:0 10px 25px rgba(37,211,102,.25) !important;
+    }
 
     .music-player{
       position:fixed;
-
       right:20px;
       bottom:20px;
-
       z-index:50;
 
       display:flex;
-
       align-items:center;
-
       gap:12px;
 
-      background:
-        rgba(20,0,10,.65);
-
+      background:rgba(20,0,10,.65);
       backdrop-filter:blur(15px);
 
-      border:
-        1px solid rgba(255,255,255,.15);
+      border:1px solid rgba(255,255,255,.15);
 
-      padding:
-        10px 15px;
-
+      padding:10px 15px;
       border-radius:50px;
 
-      box-shadow:
-        0 10px 30px rgba(0,0,0,.3);
+      box-shadow:0 10px 30px rgba(0,0,0,.3);
     }
 
     .music-player button{
-
       width:42px;
       height:42px;
-
       border:none;
-
       border-radius:50%;
-
       background:#ff6489;
-
       color:white;
-
       font-size:18px;
-
       cursor:pointer;
-
     }
 
     .music-info{
@@ -446,30 +356,17 @@
       font-size:12px;
     }
 
-    /* CORAÇÕES FLUTUANTES */
-
     .floating-heart{
-
       position:fixed;
-
       bottom:-50px;
-
       z-index:1;
-
       pointer-events:none;
-
-      animation:
-        subirCoracao linear forwards;
-
+      animation:subirCoracao linear forwards;
     }
 
     @keyframes subirCoracao{
-
       from{
-        transform:
-          translateY(0)
-          rotate(0deg);
-
+        transform:translateY(0) rotate(0deg);
         opacity:0;
       }
 
@@ -478,33 +375,19 @@
       }
 
       to{
-        transform:
-          translateY(-120vh)
-          rotate(360deg);
-
+        transform:translateY(-120vh) rotate(360deg);
         opacity:0;
       }
-
     }
 
     footer{
-
       text-align:center;
-
-      padding:
-        30px 20px 100px;
-
+      padding:30px 20px 100px;
       font-size:12px;
-
       opacity:.6;
-
       position:relative;
-
       z-index:2;
-
     }
-
-    /* MOBILE */
 
     @media(max-width:600px){
 
@@ -517,20 +400,16 @@
       }
 
       section{
-        padding:
-          65px 18px;
+        padding:65px 18px;
       }
 
       .message{
-        padding:
-          30px 22px;
+        padding:30px 22px;
       }
 
       .music-player{
-
         right:10px;
         bottom:10px;
-
       }
 
     }
@@ -540,14 +419,7 @@
 
 <body>
 
-
-<!-- BRILHOS -->
-
 <div class="stars" id="stars"></div>
-
-
-
-<!-- TELA INICIAL -->
 
 <div class="hero">
 
@@ -559,34 +431,25 @@
 
     <h1>
       Feliz Aniversário,
-      <span class="nome">Seu Nome</span>
+      <span class="nome">Érica</span>
     </h1>
 
     <p>
-
-      Algumas pessoas simplesmente tornam
-      nossos dias melhores só por existirem.
-
-      E hoje é dia de comemorar você.
-
+      Hoje é dia de comemorar você, sua história,
+      seu jeito e todos os momentos bons que ainda
+      estão por vir. 🎂✨
     </p>
 
     <button
       class="scroll-btn"
       onclick="document.getElementById('fotos').scrollIntoView()"
     >
-
-      Ver nossa história ↓
-
+      Ver momentos ↓
     </button>
 
   </div>
 
 </div>
-
-
-
-<!-- GALERIA -->
 
 <section id="fotos">
 
@@ -597,36 +460,32 @@
   <div class="gallery">
 
     <div class="photo">
-      <img src="fotos/foto1.jpg">
+      <img src="fotos/foto1.jpg" alt="Foto 1">
     </div>
 
     <div class="photo">
-      <img src="fotos/foto2.jpg">
+      <img src="fotos/foto2.jpg" alt="Foto 2">
     </div>
 
     <div class="photo">
-      <img src="fotos/foto3.jpg">
+      <img src="fotos/foto3.jpg" alt="Foto 3">
     </div>
 
     <div class="photo">
-      <img src="fotos/foto4.jpg">
+      <img src="fotos/foto4.jpg" alt="Foto 4">
     </div>
 
     <div class="photo">
-      <img src="fotos/foto5.jpg">
+      <img src="fotos/foto5.jpg" alt="Foto 5">
     </div>
 
     <div class="photo">
-      <img src="fotos/foto6.jpg">
+      <img src="fotos/foto6.jpg" alt="Foto 6">
     </div>
 
   </div>
 
 </section>
-
-
-
-<!-- MENSAGEM -->
 
 <section>
 
@@ -642,22 +501,20 @@
 
     <p>
 
-      Hoje eu só quero te desejar um aniversário
-      incrível e que esse novo ciclo venha cheio
-      de momentos bons, conquistas, felicidade
-      e pessoas que realmente façam bem para você.
+      Érica, espero que seu novo ciclo venha cheio de
+      momentos bons, conquistas, felicidade e muitas
+      histórias para lembrar.
 
       <br><br>
 
-      Espero que nunca faltem motivos para sorrir,
-      sonhos para realizar e histórias boas para
-      lembrar.
+      Que nunca faltem motivos para sorrir, pessoas
+      especiais por perto e sonhos novos para realizar.
 
       <br><br>
 
-      Aproveite muito seu dia.
+      Aproveita muito seu dia.
 
-      Você merece. 🎂✨
+      Feliz aniversário! 🎂✨
 
     </p>
 
@@ -665,38 +522,41 @@
 
 </section>
 
-
-
-<!-- SURPRESA -->
-
 <section class="surprise">
 
   <h2 class="section-title">
-    E ainda tem mais...
+    Agora o seu presente...
   </h2>
 
   <button onclick="abrirSurpresa()">
     🎁 Abrir surpresa
   </button>
 
-  <div
-    class="hidden-message"
-    id="surpresa"
-  >
+  <div class="hidden-message" id="surpresa">
 
-    <div>
+    <div class="vale">
 
-      🎉
+      <div class="vale-icon">
+        🎟️
+      </div>
 
-      <br><br>
+      <h3>
+        Vale Especial da Érica
+      </h3>
 
-      Que esse seja apenas o começo
-      de mais um ano cheio de histórias,
-      risadas e momentos inesquecíveis.
+      <p>
+        Esse vale dá direito a escolher um rolê,
+        um lanche ou um presente por minha conta. 😏
+        <br><br>
+        Pode resgatar quando quiser.
+      </p>
 
-      <br><br>
-
-      Feliz aniversário! ❤️
+      <button
+        class="resgatar"
+        onclick="resgatarVale()"
+      >
+        💬 Resgatar no WhatsApp
+      </button>
 
     </div>
 
@@ -704,17 +564,9 @@
 
 </section>
 
-
-
 <footer>
-
   Feito especialmente para você ❤️
-
 </footer>
-
-
-
-<!-- MÚSICA -->
 
 <div class="music-player">
 
@@ -737,11 +589,7 @@
 
 </div>
 
-
-<audio
-  id="music"
-  loop
->
+<audio id="music" loop>
 
   <source
     src="musica/musica.mp3"
@@ -750,10 +598,7 @@
 
 </audio>
 
-
-
 <script>
-
 
 /* MÚSICA */
 
@@ -765,32 +610,23 @@ const musicButton =
 
 let tocando = false;
 
-
 function toggleMusic(){
 
   if(tocando){
 
     music.pause();
-
-    musicButton.innerHTML =
-      "▶";
-
+    musicButton.innerHTML = "▶";
     tocando = false;
 
   }else{
 
     music.play();
-
-    musicButton.innerHTML =
-      "❚❚";
-
+    musicButton.innerHTML = "❚❚";
     tocando = true;
 
   }
 
 }
-
-
 
 /* SURPRESA */
 
@@ -803,13 +639,29 @@ function abrirSurpresa(){
 
 }
 
+/* WHATSAPP */
 
+function resgatarVale(){
+
+  const numero = "5587992049094";
+
+  const mensagem =
+    "Oi 😏 Vim resgatar meu vale de aniversário 🎟️🎂";
+
+  const url =
+    "https://wa.me/" +
+    numero +
+    "?text=" +
+    encodeURIComponent(mensagem);
+
+  window.open(url, "_blank");
+
+}
 
 /* ESTRELAS */
 
 const stars =
   document.getElementById("stars");
-
 
 for(let i = 0; i < 50; i++){
 
@@ -831,18 +683,14 @@ for(let i = 0; i < 50; i++){
 
 }
 
-
-
-/* CORAÇÕES FLUTUANTES */
+/* CORAÇÕES */
 
 function criarCoracao(){
 
   const heart =
     document.createElement("div");
 
-  heart.classList.add(
-    "floating-heart"
-  );
+  heart.classList.add("floating-heart");
 
   heart.innerHTML =
     Math.random() > .5
@@ -853,15 +701,12 @@ function criarCoracao(){
     Math.random() * 100 + "vw";
 
   heart.style.fontSize =
-    (15 + Math.random() * 20)
-    + "px";
+    (15 + Math.random() * 20) + "px";
 
   heart.style.animationDuration =
-    (6 + Math.random() * 5)
-    + "s";
+    (6 + Math.random() * 5) + "s";
 
   document.body.appendChild(heart);
-
 
   setTimeout(()=>{
 
@@ -871,12 +716,7 @@ function criarCoracao(){
 
 }
 
-
-setInterval(
-  criarCoracao,
-  900
-);
-
+setInterval(criarCoracao,900);
 
 </script>
 
