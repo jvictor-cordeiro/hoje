@@ -28,7 +28,13 @@
       color:white;
 
       background:
-        radial-gradient(circle at top, #d66b85 0%, #862c4c 35%, #3a1022 70%, #15060d 100%);
+        radial-gradient(
+          circle at top,
+          #d66b85 0%,
+          #862c4c 35%,
+          #3a1022 70%,
+          #15060d 100%
+        );
 
       min-height:100vh;
       overflow-x:hidden;
@@ -69,16 +75,12 @@
 
     .hero{
       min-height:100vh;
-
       display:flex;
       flex-direction:column;
       justify-content:center;
       align-items:center;
-
       text-align:center;
-
       padding:30px;
-
       position:relative;
       z-index:2;
     }
@@ -197,12 +199,7 @@
       content:"";
       position:absolute;
       inset:0;
-
-      background:
-        linear-gradient(
-          transparent 60%,
-          rgba(0,0,0,.45)
-        );
+      background:linear-gradient(transparent 60%, rgba(0,0,0,.45));
     }
 
     .message{
@@ -243,30 +240,20 @@
       text-align:center;
     }
 
-    .surprise button{
+    .surprise-button{
       padding:16px 35px;
       border:none;
       border-radius:50px;
-
-      background:
-        linear-gradient(
-          45deg,
-          #ff6489,
-          #ff9bb2
-        );
-
+      background:linear-gradient(45deg,#ff6489,#ff9bb2);
       color:white;
       font-size:15px;
       font-weight:600;
       cursor:pointer;
-
-      box-shadow:
-        0 12px 30px rgba(255,80,120,.35);
-
+      box-shadow:0 12px 30px rgba(255,80,120,.35);
       transition:.3s;
     }
 
-    .surprise button:hover{
+    .surprise-button:hover{
       transform:translateY(-5px) scale(1.05);
     }
 
@@ -274,13 +261,13 @@
       max-height:0;
       overflow:hidden;
       opacity:0;
-      transition:.8s ease;
+      transition:max-height .9s ease, opacity .8s ease, margin .8s ease;
       max-width:700px;
       margin:0 auto;
     }
 
     .hidden-message.show{
-      max-height:800px;
+      max-height:900px;
       opacity:1;
       margin-top:35px;
     }
@@ -292,6 +279,20 @@
       backdrop-filter:blur(15px);
       line-height:1.8;
       border:1px solid rgba(255,255,255,.15);
+      box-shadow:0 25px 60px rgba(0,0,0,.25);
+      animation:valeEntrada .8s ease;
+    }
+
+    @keyframes valeEntrada{
+      from{
+        transform:scale(.85);
+        opacity:0;
+      }
+
+      to{
+        transform:scale(1);
+        opacity:1;
+      }
     }
 
     .vale-icon{
@@ -310,8 +311,20 @@
     }
 
     .resgatar{
-      background:linear-gradient(45deg,#25d366,#128c7e) !important;
-      box-shadow:0 10px 25px rgba(37,211,102,.25) !important;
+      padding:15px 28px;
+      border:none;
+      border-radius:50px;
+      background:linear-gradient(45deg,#25d366,#128c7e);
+      color:white;
+      font-size:15px;
+      font-weight:600;
+      cursor:pointer;
+      box-shadow:0 10px 25px rgba(37,211,102,.25);
+      transition:.3s;
+    }
+
+    .resgatar:hover{
+      transform:translateY(-4px) scale(1.04);
     }
 
     .music-player{
@@ -319,19 +332,14 @@
       right:20px;
       bottom:20px;
       z-index:50;
-
       display:flex;
       align-items:center;
       gap:12px;
-
-      background:rgba(20,0,10,.65);
+      background:rgba(20,0,10,.72);
       backdrop-filter:blur(15px);
-
       border:1px solid rgba(255,255,255,.15);
-
       padding:10px 15px;
       border-radius:50px;
-
       box-shadow:0 10px 30px rgba(0,0,0,.3);
     }
 
@@ -342,13 +350,14 @@
       border-radius:50%;
       background:#ff6489;
       color:white;
-      font-size:18px;
+      font-size:17px;
       cursor:pointer;
     }
 
     .music-info{
       font-size:11px;
       line-height:1.3;
+      min-width:95px;
     }
 
     .music-info strong{
@@ -407,6 +416,10 @@
         padding:30px 22px;
       }
 
+      .vale{
+        padding:32px 20px;
+      }
+
       .music-player{
         right:10px;
         bottom:10px;
@@ -419,306 +432,405 @@
 
 <body>
 
-<div class="stars" id="stars"></div>
+  <div class="stars" id="stars"></div>
 
-<div class="hero">
+  <div class="hero">
+    <div class="hero-content">
 
-  <div class="hero-content">
-
-    <div class="mini">
-      Hoje é um dia especial
-    </div>
-
-    <h1>
-      Feliz Aniversário,
-      <span class="nome">Érica</span>
-    </h1>
-
-    <p>
-      Hoje é dia de comemorar você, sua história,
-      seu jeito e todos os momentos bons que ainda
-      estão por vir. 🎂✨
-    </p>
-
-    <button
-      class="scroll-btn"
-      onclick="document.getElementById('fotos').scrollIntoView()"
-    >
-      Ver momentos ↓
-    </button>
-
-  </div>
-
-</div>
-
-<section id="fotos">
-
-  <h2 class="section-title">
-    Alguns momentos especiais
-  </h2>
-
-  <div class="gallery">
-
-    <div class="photo">
-      <img src="fotos/foto1.jpg" alt="Foto 1">
-    </div>
-
-    <div class="photo">
-      <img src="fotos/foto2.jpg" alt="Foto 2">
-    </div>
-
-    <div class="photo">
-      <img src="fotos/foto3.jpg" alt="Foto 3">
-    </div>
-
-    <div class="photo">
-      <img src="fotos/foto4.jpg" alt="Foto 4">
-    </div>
-
-    <div class="photo">
-      <img src="fotos/foto5.jpg" alt="Foto 5">
-    </div>
-
-    <div class="photo">
-      <img src="fotos/foto6.jpg" alt="Foto 6">
-    </div>
-
-  </div>
-
-</section>
-
-<section>
-
-  <h2 class="section-title">
-    Uma mensagem para você
-  </h2>
-
-  <div class="message">
-
-    <div class="heart">
-      ❤️
-    </div>
-
-    <p>
-
-      Érica, espero que seu novo ciclo venha cheio de
-      momentos bons, conquistas, felicidade e muitas
-      histórias para lembrar.
-
-      <br><br>
-
-      Que nunca faltem motivos para sorrir, pessoas
-      especiais por perto e sonhos novos para realizar.
-
-      <br><br>
-
-      Aproveita muito seu dia.
-
-      Feliz aniversário! 🎂✨
-
-    </p>
-
-  </div>
-
-</section>
-
-<section class="surprise">
-
-  <h2 class="section-title">
-    Agora o seu presente...
-  </h2>
-
-  <button onclick="abrirSurpresa()">
-    🎁 Abrir surpresa
-  </button>
-
-  <div class="hidden-message" id="surpresa">
-
-    <div class="vale">
-
-      <div class="vale-icon">
-        🎟️
+      <div class="mini">
+        Hoje é um dia especial
       </div>
 
-      <h3>
-        Vale Especial da Érica
-      </h3>
+      <h1>
+        Feliz Aniversário,
+        <span class="nome">Érica</span>
+      </h1>
 
       <p>
-        Esse vale dá direito a escolher um rolê,
-        um lanche ou um presente por minha conta. 😏
-        <br><br>
-        Pode resgatar quando quiser.
+        Hoje é dia de comemorar você, sua história,
+        seu jeito e todos os momentos bons que ainda
+        estão por vir. 🎂✨
       </p>
 
       <button
-        class="resgatar"
-        onclick="resgatarVale()"
+        class="scroll-btn"
+        onclick="document.getElementById('fotos').scrollIntoView()"
       >
-        💬 Resgatar no WhatsApp
+        Ver momentos ↓
       </button>
+
+    </div>
+  </div>
+
+  <section id="fotos">
+
+    <h2 class="section-title">
+      Alguns momentos especiais
+    </h2>
+
+    <div class="gallery">
+
+      <div class="photo">
+        <img src="fotos/foto1.jpeg" alt="Foto especial com Érica">
+      </div>
+
+      <div class="photo">
+        <img src="fotos/foto3.jpeg" alt="Momento especial">
+      </div>
+
+      <div class="photo">
+        <img src="fotos/foto2.jpeg" alt="Momento especial">
+      </div>
+
+      <div class="photo">
+        <img src="fotos/foto4.jpeg" alt="Momento especial">
+      </div>
+
+      <div class="photo">
+        <img src="fotos/foto5.jpeg" alt="Momento especial">
+      </div>
+
+      <div class="photo">
+        <img src="fotos/foto6.jpeg" alt="Momento especial">
+      </div>
+
+    </div>
+
+  </section>
+
+  <section>
+
+    <h2 class="section-title">
+      Uma mensagem para você
+    </h2>
+
+    <div class="message">
+
+      <div class="heart">
+        ❤️
+      </div>
+
+      <p>
+        Érica, hoje eu queria te desejar mais do que só um feliz aniversário.
+
+        <br><br>
+
+        Quero que esse novo ciclo seja também o começo de uma fase muito bonita na sua vida. Sei o quanto o Direito representa para você e espero, de coração, que essa caminhada abra muitas portas, traga oportunidades, conquistas e a realização de tudo que você vem construindo.
+
+        <br><br>
+
+        Que cada passo nessa nova fase te aproxime ainda mais dos seus sonhos, que nunca falte coragem para seguir em frente e que você possa olhar para trás um dia com orgulho de tudo que conquistou.
+
+        <br><br>
+
+        Além de sucesso, desejo que não te faltem paz, pessoas sinceras por perto, momentos felizes e motivos verdadeiros para sorrir.
+
+        <br><br>
+
+        Aproveita muito o seu dia e tudo de bom que está começando a chegar.
+
+        <br><br>
+
+        Feliz aniversário, neguinha! 🎂✨
+      </p>
+
+    </div>
+
+  </section>
+
+  <section class="surprise">
+
+    <h2 class="section-title">
+      Agora o seu presente...
+    </h2>
+
+    <button
+      class="surprise-button"
+      id="surpriseButton"
+      onclick="abrirSurpresa()"
+    >
+      🎁 Abrir surpresa
+    </button>
+
+    <div class="hidden-message" id="surpresa">
+
+      <div class="vale">
+
+        <div class="vale-icon">
+          🎟️
+        </div>
+
+        <h3>
+          Vale Piroca da Érica
+        </h3>
+
+        <p>
+          Esse vale dá direito a uma noite 
+          completa de prazer, faça bom uso. 😏
+          <br><br>
+          Pode resgatar quando quiser.
+        </p>
+
+        <button
+          class="resgatar"
+          onclick="resgatarVale()"
+        >
+          💬 Resgatar no WhatsApp
+        </button>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <footer>
+    Feito especialmente para você ❤️
+  </footer>
+
+  <div class="music-player">
+
+    <button
+      id="musicButton"
+      onclick="toggleMusic()"
+    >
+      ▶
+    </button>
+
+    <div class="music-info">
+
+      <strong id="musicTitle">
+        Música do aniversário
+      </strong>
+
+      <span id="musicStatus">
+        toque para ouvir 🎵
+      </span>
 
     </div>
 
   </div>
 
-</section>
-
-<footer>
-  Feito especialmente para você ❤️
-</footer>
-
-<div class="music-player">
-
-  <button
-    id="musicButton"
-    onclick="toggleMusic()"
+  <audio
+    id="musicPrincipal"
+    loop
+    preload="auto"
   >
-    ▶
-  </button>
+    <source
+      src="musica/musica.mp3"
+      type="audio/mpeg"
+    >
+  </audio>
 
-  <div class="music-info">
-
-    <strong>
-      Nossa música
-    </strong>
-
-    toque para ouvir 🎵
-
-  </div>
-
-</div>
-
-<audio id="music" loop>
-
-  <source
-    src="musica/musica.mp3"
-    type="audio/mpeg"
+  <audio
+    id="musicSurpresa"
+    loop
+    preload="auto"
   >
+    <source
+      src="musica/surpresa.mp3"
+      type="audio/mpeg"
+    >
+  </audio>
 
-</audio>
+  <script>
 
-<script>
+    const musicPrincipal =
+      document.getElementById("musicPrincipal");
 
-/* MÚSICA */
+    const musicSurpresa =
+      document.getElementById("musicSurpresa");
 
-const music =
-  document.getElementById("music");
+    const musicButton =
+      document.getElementById("musicButton");
 
-const musicButton =
-  document.getElementById("musicButton");
+    const musicTitle =
+      document.getElementById("musicTitle");
 
-let tocando = false;
+    const musicStatus =
+      document.getElementById("musicStatus");
 
-function toggleMusic(){
+    let surpresaAberta = false;
 
-  if(tocando){
 
-    music.pause();
-    musicButton.innerHTML = "▶";
-    tocando = false;
+    function toggleMusic(){
 
-  }else{
+      const musicaAtual =
+        surpresaAberta
+          ? musicSurpresa
+          : musicPrincipal;
 
-    music.play();
-    musicButton.innerHTML = "❚❚";
-    tocando = true;
+      if(musicaAtual.paused){
 
-  }
+        musicaAtual
+          .play()
+          .then(() => {
 
-}
+            musicButton.innerHTML = "❚❚";
+            musicStatus.innerHTML = "tocando 🎵";
 
-/* SURPRESA */
+          })
+          .catch(() => {
 
-function abrirSurpresa(){
+            musicStatus.innerHTML = "toque novamente";
 
-  document
-    .getElementById("surpresa")
-    .classList
-    .toggle("show");
+          });
 
-}
+      }else{
 
-/* WHATSAPP */
+        musicaAtual.pause();
 
-function resgatarVale(){
+        musicButton.innerHTML = "▶";
+        musicStatus.innerHTML = "pausada";
 
-  const numero = "5587992049094";
+      }
 
-  const mensagem =
-    "Oi 😏 Vim resgatar meu vale de aniversário 🎟️🎂";
+    }
 
-  const url =
-    "https://wa.me/" +
-    numero +
-    "?text=" +
-    encodeURIComponent(mensagem);
 
-  window.open(url, "_blank");
+    function abrirSurpresa(){
 
-}
+      const surpresa =
+        document.getElementById("surpresa");
 
-/* ESTRELAS */
+      const botao =
+        document.getElementById("surpriseButton");
 
-const stars =
-  document.getElementById("stars");
+      surpresa
+        .classList
+        .add("show");
 
-for(let i = 0; i < 50; i++){
+      botao.innerHTML =
+        "🎁 Surpresa aberta";
 
-  const star =
-    document.createElement("div");
+      surpresaAberta = true;
 
-  star.classList.add("star");
+      musicPrincipal.pause();
 
-  star.style.left =
-    Math.random() * 100 + "%";
+      musicSurpresa.currentTime = 0;
 
-  star.style.top =
-    Math.random() * 100 + "%";
+      musicTitle.innerHTML =
+        "Música da surpresa";
 
-  star.style.animationDelay =
-    Math.random() * 3 + "s";
+      musicStatus.innerHTML =
+        "tocando 🎵";
 
-  stars.appendChild(star);
+      musicSurpresa
+        .play()
+        .then(() => {
 
-}
+          musicButton.innerHTML =
+            "❚❚";
 
-/* CORAÇÕES */
+        })
+        .catch(() => {
 
-function criarCoracao(){
+          musicButton.innerHTML =
+            "▶";
 
-  const heart =
-    document.createElement("div");
+          musicStatus.innerHTML =
+            "toque para ouvir 🎵";
 
-  heart.classList.add("floating-heart");
+        });
 
-  heart.innerHTML =
-    Math.random() > .5
-      ? "❤️"
-      : "✨";
+      setTimeout(() => {
 
-  heart.style.left =
-    Math.random() * 100 + "vw";
+        surpresa.scrollIntoView({
+          behavior:"smooth",
+          block:"center"
+        });
 
-  heart.style.fontSize =
-    (15 + Math.random() * 20) + "px";
+      },300);
 
-  heart.style.animationDuration =
-    (6 + Math.random() * 5) + "s";
+    }
 
-  document.body.appendChild(heart);
 
-  setTimeout(()=>{
+    function resgatarVale(){
 
-    heart.remove();
+      const numero =
+        "5587992049094";
 
-  },11000);
+      const mensagem =
+        "Oi 😏 Vim resgatar meu vale de aniversário 🎟️🎂";
 
-}
+      const url =
+        "https://wa.me/" +
+        numero +
+        "?text=" +
+        encodeURIComponent(mensagem);
 
-setInterval(criarCoracao,900);
+      window.open(
+        url,
+        "_blank"
+      );
 
-</script>
+    }
+
+
+    const stars =
+      document.getElementById("stars");
+
+    for(let i = 0; i < 50; i++){
+
+      const star =
+        document.createElement("div");
+
+      star.classList.add("star");
+
+      star.style.left =
+        Math.random() * 100 + "%";
+
+      star.style.top =
+        Math.random() * 100 + "%";
+
+      star.style.animationDelay =
+        Math.random() * 3 + "s";
+
+      stars.appendChild(star);
+
+    }
+
+
+    function criarCoracao(){
+
+      const heart =
+        document.createElement("div");
+
+      heart.classList.add(
+        "floating-heart"
+      );
+
+      heart.innerHTML =
+        Math.random() > .5
+          ? "❤️"
+          : "✨";
+
+      heart.style.left =
+        Math.random() * 100 + "vw";
+
+      heart.style.fontSize =
+        (15 + Math.random() * 20) + "px";
+
+      heart.style.animationDuration =
+        (6 + Math.random() * 5) + "s";
+
+      document.body.appendChild(heart);
+
+      setTimeout(() => {
+
+        heart.remove();
+
+      },11000);
+
+    }
+
+
+    setInterval(
+      criarCoracao,
+      900
+    );
+
+  </script>
 
 </body>
 </html>
